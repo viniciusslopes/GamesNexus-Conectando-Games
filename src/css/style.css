@@ -68,8 +68,43 @@ img {
     align-items: center;
 }
 
+.nav__log{
+    display: flex;
+    align-items: center;
+}
+
 .nav__logo {
     font-weight: var(--font-semi-bold);
+}
+
+.logo{
+    width: 15%;
+}
+
+.nav__actions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .8rem;
+    margin-right: 10%;
+}
+
+.nav__close{
+    /* Retirar o display none atraves do js */
+    display: none;
+    position: absolute;
+}
+
+.nav__toggle{
+    /* Retirar o display block e inserir o display none atraves do js */
+    display: block;
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 15%;
 }
 
 
@@ -78,13 +113,14 @@ img {
 @media screen and (max-width:1149px) {
     .nav__menu {
         position: fixed;
-        top: 0;
+        top: 5%;
+        right: 3%;
+        text-align: center;
+        /* display: none; */
 
 
-        width: 80%;
-        height: 100%;
-        box-shadow: -2px 0 12px hsla(0, 0%, 0%, .2);
-        padding: 6rem;
-
+        width: 25%;
+        height: 15%;
+        box-shadow: -2px 0 12px hsl(0, 0%, 0%);
     }
 }
