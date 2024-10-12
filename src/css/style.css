@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    --header-height: 3.5rem;
+
+
+    /* tipo font */
+    --body-font: "Roboto Slab", serif;
+    --biggerst-font-size: 6rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .930rem;
+    --small-font-size: .813rem;
+
+    /* font weight */
+
+    --font-regular: 400;
+    --font-semi-bold: 600;
+
+
+}
+
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    /* background-color: rgb(47, 44, 44); */
+    background: linear-gradient(138deg, rgba(19, 0, 36, 1) 0%, rgba(96, 0, 130, 1) 35%, rgba(152, 0, 164, 1) 55%, rgba(174, 36, 214, 1) 77%, rgba(199, 19, 234, 1) 88%, rgba(135, 0, 152, 1) 100%);
+    color: hsl(0, 100%, 100%);
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFF;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.main {
+    overflow: hidden;
+}
+
+.nav {
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    font-weight: var(--font-semi-bold);
+}
+
+
+
+
+@media screen and (max-width:1149px) {
+    .nav__menu {
+        position: fixed;
+        top: 0;
+
+
+        width: 80%;
+        height: 100%;
+        box-shadow: -2px 0 12px hsla(0, 0%, 0%, .2);
+        padding: 6rem;
+
+    }
+}
