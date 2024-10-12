@@ -30,8 +30,6 @@
 body {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    /* background-color: rgb(47, 44, 44); */
-    /* background: linear-gradient(138deg, rgba(19, 0, 36, 1) 0%, rgba(96, 0, 130, 1) 35%, rgba(152, 0, 164, 1) 55%, rgba(174, 36, 214, 1) 77%, rgba(199, 19, 234, 1) 88%, rgba(135, 0, 152, 1) 100%); */
     background: url(../img/roxo5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -83,13 +81,8 @@ img {
     align-items: center;
 }
 
-/* .nav__log{
-    display: flex;
-    align-items: center;
-} */
-
 .nav__logo {
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--font-regular);
 }
 
 .logo {
@@ -129,20 +122,6 @@ img {
     right: 1.5rem;
 }
 
-/* 
-.nav__close{
-   
-    display: none;
-    position: absolute;
-} */
-
-/* .nav__toggle{
-  
-    display: block;
-} */
-
-
-
 
 @media screen and (max-width:1149px) {
     .nav__menu {
@@ -150,12 +129,10 @@ img {
         top: 0;
         right: -100%;
 
-        /* display: none; */
-
-        background: linear-gradient(180deg, rgba(19, 0, 36, 1) 0%, rgba(56, 0, 80, 1) 21%, rgba(90, 0, 122, 1) 36%, rgba(96, 0, 130, 0.9) 48%, rgba(152, 0, 164, 0.7) 64%, rgba(174, 36, 214, 0.5) 77%, rgba(199, 19, 234, 0.5) 88%, rgba(135, 0, 152, 0.4) 100%);
+        background: linear-gradient(180deg, rgba(19,0,36,1) 0%, rgba(56,0,80,1) 21%, rgba(90,0,122,0.9) 36%, rgba(96,0,130,0.8) 48%, rgba(152,0,164,0.7) 64%, rgba(174,36,214,0.5) 77%, rgba(199,19,234,0.4) 88%, rgba(135,0,152,0.3) 100%);
         width: 60%;
         height: 100%;
-        box-shadow: -2px 0 12px hslahsl(0, 0%, 0%);
+        box-shadow: -2px 0 12px hsla(0, 0%, 0%);
         padding: 6rem 3rem 0;
         transition: right .6s;
     }
@@ -183,48 +160,56 @@ img {
 .home__img {
     width: 400px;
     margin: 0 auto 2rem;
-    filter: drop-shadow(-8px 8px 16px hsla(0, 100%, 1%, 0.605));
+    filter: drop-shadow(-8px 8px 16px hsla(0, 0%, 0%, 0.521));
 }
 
 .home__article {
-    text-align: center;
     position: relative;
+    height: 280px;
 }
 
 .home__info{
     position: absolute;
-    z-index: 1;
-    bottom: 3%;
-    left: 20%;
-    font-size: var(--small-font-size);
+    bottom: 5%;
+    left: 8%;
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: center;
-    gap: 10px;
+    justify-content: flex-end;
+    gap: 14px;
     width: 300px;
 }
 
 .home__product{
-    font-size: var(--normal-font-size);
+    font-size: var(--h3-font-size);
 }
 
 .btn-find-out-more{
-    border: none;
-    background-color: rgba(128, 0, 128, 0.924);
-    color: #ffff;
-    border-radius: 20px;
+    background-color: hsla(300, 100%, 25%, 0.924);
+    color: #ffffff;
     width: 100px;
-    height: 20px;
-    font-size: 12px;
-    font-weight: var(--font-semi-bold);
+    height: 30px;
+    border: 3px solid #ffffff;
+    border-radius: 45px;
+    transition: all 0.3s;
     cursor: pointer;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
 
+}
+
+.btn-find-out-more:hover{
+    background: #ffffff;
+    color: hsla(300, 100%, 25%, 0.924);
+    border: 3px solid hsla(300, 100%, 25%, 0.924);
+    transform: scale(1.1);
 }
 
 .home__description{
     font-size: 8px;
-    width: 230px;
-    text-align: start;
+    width: 100%;
+    text-align: justify;
+    font-size: var(--small-font-size);
+    background-color: hsla(0, 0%, 0%, 0.357);
 }
 
