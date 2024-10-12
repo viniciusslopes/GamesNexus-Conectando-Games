@@ -184,4 +184,42 @@ img {
 
 .home__article {
     text-align: center;
+    position: relative;
+}
+
+.home__info{
+    position: absolute;
+    z-index: 1;
+    bottom: 3%;
+    left: 20%;
+    font-size: var(--small-font-size);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    width: 300px;
+}
+
+.home__product{
+    font-size: var(--normal-font-size);
+}
+
+.btn-find-out-more{
+    border: none;
+    background-color: rgba(128, 0, 128, 0.924);
+    color: #ffff;
+    border-radius: 20px;
+    width: 100px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: var(--font-semi-bold);
+    cursor: pointer;
+
+}
+
+.home__description{
+    font-size: 8px;
+    width: 230px;
+    text-align: start;
 }
