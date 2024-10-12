@@ -60,6 +60,17 @@ img {
     overflow: hidden;
 }
 
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(138deg, rgba(19, 0, 36, 1) 0%, rgba(96, 0, 130, 1) 35%, rgba(152, 0, 164, 1) 55%, rgba(174, 36, 214, 1) 77%, rgba(199, 19, 234, 1) 88%, rgba(135, 0, 152, 1) 100%);
+    z-index: 100;
+    transition: background-color .3s, box-shadow .3s;
+}
+
 .nav {
     position: relative;
     height: var(--header-height);
@@ -68,44 +79,63 @@ img {
     align-items: center;
 }
 
-.nav__log{
+/* .nav__log{
     display: flex;
     align-items: center;
-}
+} */
 
 .nav__logo {
     font-weight: var(--font-semi-bold);
 }
 
-.logo{
-    width: 15%;
+.logo {
+    width: 10%;
 }
 
-.nav__actions{
+.nav__close,
+.nav__toggle,
+.nav__actions {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: .8rem;
-    margin-right: 10%;
+    font-size: 1.25rem;
+    cursor: pointer;
 }
 
-.nav__close{
-    /* Retirar o display none atraves do js */
-    display: none;
-    position: absolute;
+.nav__actions {
+    column-gap: .5rem;
 }
 
-.nav__toggle{
-    /* Retirar o display block e inserir o display none atraves do js */
-    display: block;
-}
-
-.nav__list{
+.nav__list {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    margin-top: 15%;
+    row-gap: 3rem;
 }
+
+.nav__link {
+    color: #ffffff;
+    font-weight: var(--font-semi-bold);
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.nav__close {
+    position: absolute;
+    top: 1.15rem;
+    right: 1.5rem;
+}
+
+/* 
+.nav__close{
+   
+    display: none;
+    position: absolute;
+} */
+
+/* .nav__toggle{
+  
+    display: block;
+} */
 
 
 
@@ -113,14 +143,45 @@ img {
 @media screen and (max-width:1149px) {
     .nav__menu {
         position: fixed;
-        top: 5%;
-        right: 3%;
-        text-align: center;
+        top: 0;
+        right: -100%;
+
         /* display: none; */
 
-
-        width: 25%;
-        height: 15%;
-        box-shadow: -2px 0 12px hsl(0, 0%, 0%);
+        background: linear-gradient(180deg, rgba(19, 0, 36, 1) 0%, rgba(56, 0, 80, 1) 21%, rgba(90, 0, 122, 1) 36%, rgba(96, 0, 130, 0.9) 48%, rgba(152, 0, 164, 0.7) 64%, rgba(174, 36, 214, 0.5) 77%, rgba(199, 19, 234, 0.5) 88%, rgba(135, 0, 152, 0.4) 100%);
+        width: 60%;
+        height: 100%;
+        box-shadow: -2px 0 12px hslahsl(0, 0%, 0%);
+        padding: 6rem 3rem 0;
+        transition: right .6s;
     }
+}
+
+.show-menu {
+    right: 0;
+}
+
+/* Homme Style */
+
+.home__container {
+    height: 100vh;
+    padding-block: 9rem 2rem;
+    display: grid;
+    align-items: center;
+    row-gap: 6rem;
+}
+
+.home__content {
+    position: relative;
+    display: grid;
+}
+
+.home__img {
+    width: 300px;
+    margin: 0 auto 2rem;
+    filter: drop-shadow(-8px 8px 16px hsla(0, 100%, 1%, 0.605));
+}
+
+.home__article {
+    text-align: center;
 }
