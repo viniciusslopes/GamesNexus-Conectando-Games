@@ -31,7 +31,10 @@ body {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     /* background-color: rgb(47, 44, 44); */
-    background: linear-gradient(138deg, rgba(19, 0, 36, 1) 0%, rgba(96, 0, 130, 1) 35%, rgba(152, 0, 164, 1) 55%, rgba(174, 36, 214, 1) 77%, rgba(199, 19, 234, 1) 88%, rgba(135, 0, 152, 1) 100%);
+    /* background: linear-gradient(138deg, rgba(19, 0, 36, 1) 0%, rgba(96, 0, 130, 1) 35%, rgba(152, 0, 164, 1) 55%, rgba(174, 36, 214, 1) 77%, rgba(199, 19, 234, 1) 88%, rgba(135, 0, 152, 1) 100%); */
+    background: url(../img/roxo5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: hsl(0, 100%, 100%);
 }
 
@@ -66,7 +69,8 @@ img {
     width: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(138deg, rgba(19, 0, 36, 1) 0%, rgba(96, 0, 130, 1) 35%, rgba(152, 0, 164, 1) 55%, rgba(174, 36, 214, 1) 77%, rgba(199, 19, 234, 1) 88%, rgba(135, 0, 152, 1) 100%);
+    /* background: linear-gradient(138deg, rgba(19, 0, 36, 1) 0%, rgba(96, 0, 130, 1) 35%, rgba(152, 0, 164, 1) 55%, rgba(174, 36, 214, 1) 77%, rgba(199, 19, 234, 1) 88%, rgba(135, 0, 152, 1) 100%); */
+   background: transparent;
     z-index: 100;
     transition: background-color .3s, box-shadow .3s;
 }
@@ -177,7 +181,7 @@ img {
 }
 
 .home__img {
-    width: 300px;
+    width: 400px;
     margin: 0 auto 2rem;
     filter: drop-shadow(-8px 8px 16px hsla(0, 100%, 1%, 0.605));
 }
@@ -223,3 +227,4 @@ img {
     width: 230px;
     text-align: start;
 }
+
