@@ -19,10 +19,21 @@ const swiperHome = new Swiper('.home__swiper', {
     grabCursor: true,
     slidesPerView: 'auto',
 
-    // navigation:{
-    //     nextEl:true,
-    //     prevEl:true,
-    // },
+    autoplay: {
+        delay: 4000,
+    },
+
+    effect: 'creative',
+    creativeEffect: {
+        prev: {
+            translate: ['100%', 0, -400],
+            opacity: 0,
+            },
+        next: {
+            translate: ['100%', 0, 0],
+            opacity: 0,
+        },
+    },
 
     breakpoints: {
         768: {
