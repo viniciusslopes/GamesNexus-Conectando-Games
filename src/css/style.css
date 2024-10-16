@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -68,7 +70,9 @@ img {
     top: 0;
     left: 0;
     /* background: linear-gradient(138deg, rgba(19, 0, 36, 1) 0%, rgba(96, 0, 130, 1) 35%, rgba(152, 0, 164, 1) 55%, rgba(174, 36, 214, 1) 77%, rgba(199, 19, 234, 1) 88%, rgba(135, 0, 152, 1) 100%); */
-   background: transparent;
+    background: transparent;
+    display: grid;
+    row-gap: 1.5rem;
     z-index: 100;
     transition: background-color .3s, box-shadow .3s;
 }
@@ -89,7 +93,7 @@ img {
     width: 10%;
 }
 
-.search__container{
+.search__container {
     display: none;
 }
 
@@ -133,13 +137,15 @@ img {
         top: 0;
         right: -100%;
 
-        background: linear-gradient(180deg, rgba(19,0,36,1) 0%, rgba(56,0,80,1) 21%, rgba(90,0,122,0.9) 36%, rgba(96,0,130,0.8) 48%, rgba(152,0,164,0.7) 64%, rgba(174,36,214,0.5) 77%, rgba(199,19,234,0.4) 88%, rgba(135,0,152,0.3) 100%);
+        background: linear-gradient(180deg, rgba(19, 0, 36, 1) 0%, rgba(56, 0, 80, 1) 21%, rgba(90, 0, 122, 0.9) 36%, rgba(96, 0, 130, 0.8) 48%, rgba(152, 0, 164, 0.7) 64%, rgba(174, 36, 214, 0.5) 77%, rgba(199, 19, 234, 0.4) 88%, rgba(135, 0, 152, 0.3) 100%);
         width: 60%;
         height: 100%;
         box-shadow: -2px 0 12px hsla(0, 0%, 0%);
         padding: 6rem 3rem 0;
         transition: right .6s;
     }
+
+    
 }
 
 .show-menu {
@@ -172,7 +178,7 @@ img {
     height: 280px;
 }
 
-.home__info{
+.home__info {
     position: absolute;
     bottom: 5%;
     left: 8%;
@@ -184,11 +190,11 @@ img {
     width: 300px;
 }
 
-.home__product{
+.home__product {
     font-size: var(--h3-font-size);
 }
 
-.btn-find-out-more{
+.btn-find-out-more {
     background-color: hsla(300, 100%, 25%, 0.924);
     color: #ffffff;
     width: 100px;
@@ -202,19 +208,78 @@ img {
 
 }
 
-.btn-find-out-more:hover{
+.btn-find-out-more:hover {
     background: #ffffff;
     color: hsla(300, 100%, 25%, 0.924);
     border: 3px solid hsla(300, 100%, 25%, 0.924);
     transform: scale(1.1);
 }
 
-.home__description{
+.home__description {
     font-size: 8px;
     width: 100%;
     text-align: justify;
     font-size: var(--small-font-size);
     background-color: hsla(0, 0%, 0%, 0.357);
+}
+
+.info__games {
+    width: 100%;
+}
+
+.content__games {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 30px;
+    
+
+}
+
+#tittle-dynamic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Protest Strike", sans-serif;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+#tittle-dynamic::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+
+.bg-header {
+    background-color: rgba(0, 0, 0, 0.752);
+    box-shadow: 0 2px 16px hsla(0, 0%, 0%, .1);
+}
+
+@keyframes pisca {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.content__infogame {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+   
+}
+
+.content__img {
+    width: 200px;
 }
 
 @media screen and (min-width: 1149px) {
@@ -224,10 +289,12 @@ img {
         height: 60px;
     }
 
-    .container{
+    .container {
         max-width: 100%;
     }
-    .nav__close, .nav__actions{
+
+    .nav__close,
+    .nav__actions {
         display: none;
     }
 
@@ -258,7 +325,8 @@ img {
 
     /* Main */
 
-    .home__article, .home__content {
+    .home__article,
+    .home__content {
         height: 100%;
     }
 
@@ -278,5 +346,7 @@ img {
         height: 38px;
         font-size: var(--normal-font-size);
     }
+
+    
 
 }
